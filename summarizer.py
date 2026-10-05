@@ -36,7 +36,7 @@ ENGINES = {
     "groq": {
         "name": "Groq Ultra-Fast (Llama 3.1 70B)",
         "base_url": "https://api.groq.com/openai/v1",
-        "model": "llama-3.1-70b-versatile",
+        "model": "llama3-70b-8192",
         "env_key": "GROQ_API_KEY",
         "doc_url": "https://console.groq.com",
     },
