@@ -34,9 +34,9 @@ ENGINES = {
         "doc_url": "https://build.nvidia.com",
     },
     "groq": {
-        "name": "Groq Ultra-Fast (Llama 3.3 70B)",
+        "name": "Groq Ultra-Fast (GPT-OSS 120B)",
         "base_url": "https://api.groq.com/openai/v1",
-        "model": "llama-3.3-70b-versatile",
+        "model": "openai/gpt-oss-120b",
         "env_key": "GROQ_API_KEY",
         "doc_url": "https://console.groq.com",
     },
