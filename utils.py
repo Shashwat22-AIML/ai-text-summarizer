@@ -49,6 +49,9 @@ def clean_text(text: str) -> str:
 # Document text extraction
 # ---------------------------------------------------------------------------
 
+MAX_FILE_SIZE_MB = 2
+MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
+
 def extract_text_from_file(uploaded_file) -> tuple[str, str]:
     """
     Extract plain text from an uploaded file object (from st.file_uploader).
@@ -73,7 +76,15 @@ def extract_text_from_file(uploaded_file) -> tuple[str, str]:
     filename = uploaded_file.name.lower()
     if hasattr(uploaded_file, "seek"):
         uploaded_file.seek(0)
-    file_bytes = uploaded_file.read()  # read raw bytes once
+    
+    # Check file size
+    file_bytes = uploaded_file.read()
+    if len(file_bytes) > MAX_FILE_SIZE_BYTES:
+        return "", (
+            f"File too large ({len(file_bytes) / (1024*1024):.1f} MB). "
+            f"Maximum allowed size is {MAX_FILE_SIZE_MB} MB. "
+            "Please upload a smaller file or paste the text directly."
+        )
 
     # ---- Plain text (.txt) ----
     if filename.endswith(".txt"):

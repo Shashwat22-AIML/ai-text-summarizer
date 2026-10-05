@@ -47,6 +47,7 @@ ENGINES = {
 # ---------------------------------------------------------------------------
 CHUNK_SIZE_WORDS = 1500
 CHUNK_OVERLAP_WORDS = 80
+MAX_CHUNKS = 10  # Limit to prevent excessive API calls
 MAX_RETRIES = 2
 RETRY_DELAY_SEC = 2
 
@@ -180,7 +181,7 @@ def _split_into_chunks(text: str, chunk_size: int = CHUNK_SIZE_WORDS) -> list[st
 
     chunks = []
     start = 0
-    while start < total:
+    while start < total and len(chunks) < MAX_CHUNKS:
         end = min(start + chunk_size, total)
         chunks.append(" ".join(words[start:end]))
         if end == total:
