@@ -1,14 +1,15 @@
 """
-summarizer.py — Multi-engine Summarization Engine with Real-Time Streaming.
+summarizer.py - Multi-engine Summarization Engine with Real-Time Streaming.
 
 Supports:
 1. NVIDIA NIM: Nemotron 3 Ultra 550B (deep, high-parameter reasoning)
-2. Groq Cloud: Llama 3.3 70B Versatile (ultra-fast, sub-second LPU inference)
+2. Groq Cloud: Llama 3.3 70B / Qwen (ultra-fast, sub-second LPU inference)
 
 Features:
 - Token streaming generator for typewriter display via st.write_stream
 - Dynamic max_tokens based on selected length
 - Smart chunking for long documents
+- Streamlit Cloud secrets + .env fallback
 - Graceful error handling for missing keys or API limits
 """
 
@@ -33,9 +34,9 @@ ENGINES = {
         "doc_url": "https://build.nvidia.com",
     },
     "groq": {
-        "name": "Groq Ultra-Fast (Qwen 27B)",
+        "name": "Groq Ultra-Fast (Llama 3.3 70B)",
         "base_url": "https://api.groq.com/openai/v1",
-        "model": "qwen/qwen3.8-27b",
+        "model": "llama-3.3-70b-versatile",
         "env_key": "GROQ_API_KEY",
         "doc_url": "https://console.groq.com",
     },
@@ -50,19 +51,33 @@ MAX_RETRIES = 2
 RETRY_DELAY_SEC = 2
 
 
+def get_secret(key: str, default: str = "") -> str:
+    """Retrieve secret from environment or Streamlit secrets."""
+    val = os.environ.get(key, "").strip()
+    if val:
+        return val
+    try:
+        import streamlit as st
+        if hasattr(st, "secrets") and key in st.secrets:
+            return str(st.secrets[key]).strip()
+    except Exception:
+        pass
+    return default
+
+
 # ---------------------------------------------------------------------------
 # Client factory
 # ---------------------------------------------------------------------------
 
-def get_client(engine: str = "nvidia", custom_key: Optional[str] = None) -> Tuple[OpenAI, str]:
+def get_client(engine: str = "groq", custom_key: Optional[str] = None) -> Tuple[OpenAI, str]:
     """
     Create an OpenAI-compatible client for either NVIDIA NIM or Groq.
 
     Returns:
         (client, model_name)
     """
-    engine_cfg = ENGINES.get(engine, ENGINES["nvidia"])
-    api_key = (custom_key or "").strip() or os.environ.get(engine_cfg["env_key"], "").strip()
+    engine_cfg = ENGINES.get(engine, ENGINES["groq"])
+    api_key = (custom_key or "").strip() or get_secret(engine_cfg["env_key"])
 
     if not api_key:
         label = engine_cfg["name"]
@@ -70,7 +85,7 @@ def get_client(engine: str = "nvidia", custom_key: Optional[str] = None) -> Tupl
         doc = engine_cfg["doc_url"]
         raise EnvironmentError(
             f"API key for {label} is missing.\n\n"
-            f"Please enter your `{env_var}` in the sidebar or add it to `.env`.\n"
+            f"Please enter your `{env_var}` in the sidebar, add it to `.env`, or configure Streamlit Secrets.\n"
             f"Get a free key here: {doc}"
         )
 
@@ -83,34 +98,33 @@ def get_client(engine: str = "nvidia", custom_key: Optional[str] = None) -> Tupl
 
 
 # ---------------------------------------------------------------------------
-# Prompt builder
+# Prompt engineering
 # ---------------------------------------------------------------------------
 
 def _build_system_prompt(mode: str, length: str, style: str) -> str:
-    """Compose the prompt guiding the summary style, length, and format."""
+    """Construct prompt based on mode, length and style."""
     format_instructions = {
         "bullet": (
-            "Present the summary as a concise bullet-point list. "
-            "Each bullet should be a single clear idea. "
-            "Do NOT write paragraphs; use only bullet points."
+            "Present the summary as clean bullet points using '- ' syntax. "
+            "Group points logically if appropriate. Do not use roman numerals."
         ),
         "paragraph": (
-            "Present the summary as one or more short, coherent paragraphs. "
-            "Do NOT use bullet points."
+            "Write the summary as fluent, well-structured prose paragraphs. "
+            "Use clear topic sentences for each paragraph."
         ),
     }
 
     length_instructions = {
         "short": (
-            "Keep the summary very brief — aim for 3–5 bullets or 2–3 sentences. "
-            "Only the most critical information."
+            "Keep it very concise - 3 to 5 bullet points or 2 to 3 sentences maximum. "
+            "Capture only the core takeaway."
         ),
         "medium": (
-            "Provide a balanced summary — around 6–10 bullets or 4–6 sentences. "
-            "Cover the main points without going into every detail."
+            "Provide a balanced summary - 5 to 8 bullet points or 4 to 6 sentences. "
+            "Cover major points and essential context."
         ),
         "detailed": (
-            "Write a thorough summary — 10–15 bullets or 7–10 sentences. "
+            "Write a thorough summary - 10 to 15 bullets or 7 to 10 sentences. "
             "Include important supporting details and nuances."
         ),
     }
@@ -235,7 +249,7 @@ def stream_summarize(
     mode: str = "paragraph",
     length: str = "medium",
     style: str = "student",
-    engine: str = "nvidia",
+    engine: str = "groq",
     custom_key: Optional[str] = None,
     status_callback: Optional[Callable[[str], None]] = None,
 ) -> Tuple[Generator[str, None, None], int]:
@@ -314,7 +328,7 @@ def summarize(
     mode: str = "paragraph",
     length: str = "medium",
     style: str = "student",
-    engine: str = "nvidia",
+    engine: str = "groq",
     custom_key: Optional[str] = None,
     progress_callback: Optional[Callable[[str, int, int], None]] = None,
 ) -> Tuple[str, int]:
