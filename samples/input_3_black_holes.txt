@@ -1,0 +1,11 @@
+What is a black hole and how does it form?
+
+A black hole is a region in space where the pull of gravity is so strong that nothing — not even light — can escape from it. The boundary around a black hole beyond which escape is impossible is called the event horizon. Once anything crosses the event horizon, it is gone from the observable universe forever.
+
+Most black holes form when a massive star (at least about 20 times the mass of our Sun) runs out of fuel and collapses under its own gravity. During most of its life, a star is in balance between two forces: the outward pressure from nuclear fusion reactions in its core, and the inward pull of gravity. When the star runs out of fuel, fusion stops, and gravity wins. The star's core collapses in a fraction of a second, triggering a massive explosion called a supernova. If the remaining core is heavy enough — roughly three times the mass of the Sun or more — it collapses all the way into a black hole.
+
+There are different types of black holes. Stellar-mass black holes form from collapsed stars and typically have masses between 5 and 100 times that of the Sun. Supermassive black holes, found at the centers of most galaxies (including our own Milky Way), have masses millions or even billions of times that of the Sun. How supermassive black holes formed is still an area of active research.
+
+Black holes cannot be seen directly because they emit no light. Astronomers detect them indirectly — by observing how their gravity affects the motion of nearby stars or gas, or by detecting X-rays emitted by hot gas swirling into the black hole. In 2019, the Event Horizon Telescope captured the first-ever image of a black hole's shadow (in galaxy M87), a historic achievement.
+
+General relativity, Einstein's theory of gravity, predicts that at the very center of a black hole there is a "singularity" — a point of infinite density where our current laws of physics break down. What happens there remains one of the great unsolved mysteries of physics.

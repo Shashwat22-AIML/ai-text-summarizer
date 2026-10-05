@@ -1,0 +1,26 @@
+﻿# ---- Environment / secrets ----
+.env
+
+# ---- Python cache ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ---- Virtual environments ----
+.venv/
+venv/
+env/
+ENV/
+
+# ---- IDEs ----
+.vscode/
+.idea/
+
+# ---- OS files ----
+.DS_Store
+Thumbs.db
+
+# ---- Streamlit secrets (keep config.toml but block secrets.toml) ----
+.streamlit/secrets.toml

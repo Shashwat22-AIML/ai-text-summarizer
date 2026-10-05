@@ -1,0 +1,7 @@
+SAMPLE 2 — Q3 2024 Board Meeting
+Options: Short Paragraph | Short | Executive Brief
+Original words: ~380 | Summary words: ~85
+Compression: ~22%
+──────────────────────────────────────────────────────────
+
+Q3 2024 delivered strong results: $42.7M revenue (+14% YoY), 64% gross margin, and $4.3M net income, supported by $18.2M cash and zero debt. The board approved a $5M share buyback. The v4.2 platform launched ahead of schedule with a 38% reduction in customer-reported bugs. Net new ARR of $6.4M slightly missed the $7M target; churn hit a record low of 2.1%, and five enterprise deals closed above $500K. Key risks include ML talent costs (+20% YoY) and three at-risk accounts ($1.8M ARR). Approved actions: share buyback, 12 additional engineers by year-end, Singapore and Frankfurt data centers in H1 2025, and an enterprise pricing review in Q4.

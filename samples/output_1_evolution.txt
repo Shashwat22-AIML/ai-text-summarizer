@@ -1,0 +1,21 @@
+SAMPLE 1 — Evolution by Natural Selection
+Options: Bullet Points | Medium | Student Notes
+Original words: ~380 | Summary words: ~110
+Compression: ~29%
+──────────────────────────────────────────────────────────
+
+• **Darwin's Theory (1859):** Evolution = organisms change over time due to heritable trait changes; better-adapted individuals survive and reproduce more.
+
+• **Natural Selection:** The primary driver of evolution. Organisms with advantageous inherited traits leave more offspring → population-level change over generations.
+
+• **Genetic Drift:** Random fluctuation in trait frequencies — not driven by survival advantage, just chance.
+
+• **Gene Flow (Migration):** Organisms moving between areas carry genetic variants, introducing or removing them from populations.
+
+• **Mutations:** Random DNA changes; the ultimate source of new variation. Rarely beneficial, but when they are, they fuel evolution.
+
+• **Evidence — Fossil Record:** Shows life has changed over time; documents evolutionary history and relationships between species.
+
+• **Evidence — Comparative Anatomy:** Homologous structures (e.g., mammal forelimbs) and vestigial organs (e.g., human appendix) point to shared ancestry.
+
+• **Evidence — Molecular Biology:** Shared genetic code + similar DNA/protein sequences across all life → common ancestor; DNA similarity ∝ recency of shared ancestor.

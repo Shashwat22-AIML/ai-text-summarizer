@@ -1,0 +1,27 @@
+Q3 2024 Board Meeting — Executive Summary
+
+Attendees: CEO (Sarah Chen), CFO (Mark Rivera), CTO (James Okafor), VP Sales (Priya Nair), VP Operations (Tom Walsh)
+
+Financial Performance:
+Revenue for Q3 2024 reached $42.7 million, representing a 14% year-over-year increase compared to Q3 2023's $37.5 million. Gross margin improved from 61% to 64%, driven primarily by reduced cloud infrastructure costs following the migration to our own data centers completed in July. EBITDA for the quarter was $8.1 million (19% margin), up from $5.9 million in the same period last year. Net income was $4.3 million compared to $2.8 million in Q3 2023.
+
+Cash position stands at $18.2 million with no outstanding debt. The board approved a $5 million share buyback program to begin in Q4 2024.
+
+Product & Technology:
+The CTO reported that the v4.2 platform release shipped two weeks ahead of schedule. Key features include real-time collaboration tools and an upgraded AI recommendation engine. Customer-reported bugs dropped 38% compared to the previous release cycle, attributed to the new automated testing pipeline.
+
+The engineering team grew from 48 to 61 engineers this quarter, with plans to hire 12 more by end of year. The CTO flagged a risk: competition for senior ML engineers remains intense and salary expectations have increased ~20% year-over-year.
+
+Sales & Customer Success:
+VP Sales reported net new ARR of $6.4 million, slightly below the $7 million target. Churn for the quarter was 2.1%, the lowest in company history. Five enterprise deals closed, each above $500K ARR. The sales cycle for enterprise has shortened from an average of 4.2 months to 3.5 months, credited to the new proof-of-concept (POC) program.
+
+Three at-risk accounts totaling $1.8 million ARR were flagged; the Customer Success team has escalation plans in place.
+
+Operations:
+Data center migration is complete and delivered $1.1 million in quarterly savings against a $2.3 million migration cost (payback period: ~2 quarters). SLA uptime was 99.97% for the quarter. Two new regional data centers (Singapore and Frankfurt) are planned for H1 2025 to address latency complaints from APAC and European customers.
+
+Key Decisions Made:
+1. Approve $5M share buyback starting Q4 2024.
+2. Increase engineering headcount target by 12 by year end.
+3. Proceed with Singapore and Frankfurt data center expansions in H1 2025.
+4. Schedule a dedicated session in Q4 to review enterprise pricing strategy.

@@ -1,0 +1,17 @@
+The theory of evolution by natural selection, first formulated in Charles Darwin's book "On the Origin of Species" in 1859, is the process by which organisms change over time as a result of changes in heritable physical or behavioral traits. Changes that allow an organism to better adapt to its environment will help it survive and have more offspring.
+
+Evolution occurs when there are changes in the heritable features of a population. These changes are due to the introduction of new genetic variants into a population, the removal of genetic variants from a population, or the changes in the relative frequencies of existing variants.
+
+Natural selection is the mechanism most often associated with evolution. It occurs when some organisms with certain inherited traits tend to survive in their environment and produce more offspring than other organisms with different traits. Over time, this can result in one type of organism changing into a different type—which is the heart of evolution.
+
+Genetic drift is another mechanism of evolution. It is the random fluctuation in the frequency of inherited traits in a population. It can cause traits to become more or less common in a population without those traits conferring any particular survival or reproductive advantage.
+
+Gene flow, also called migration, occurs when organisms move from one geographic area to another and carry their genetic makeup with them. This can introduce new genetic variants to a population or remove them.
+
+Mutations are random changes in the DNA sequence of an organism. They are the ultimate source of new genetic variation in a population. Most mutations are neutral or harmful, but occasionally a mutation may prove to be beneficial and allow an organism to better survive and reproduce.
+
+The fossil record provides direct evidence for the fact of evolution. Fossils show that life has changed over time — that organisms from the past were different from organisms today. The fossil record also shows the evolutionary history of life — showing how different groups of organisms are related to each other.
+
+Comparative anatomy provides additional evidence for evolution. Homologous structures — such as the forelimbs of mammals, which have the same basic bone structure despite being used for very different purposes — suggest that these organisms shared a common ancestor. Vestigial structures, such as the human appendix or the remnants of a pelvis in snakes, are structures that have lost their original function in the course of evolution.
+
+Molecular biology also provides evidence for evolution. Because all organisms on Earth share the same genetic code, and because many proteins and DNA sequences are similar across very different types of organisms, it appears that all life on Earth shares a common ancestor. The degree of similarity in DNA sequence between two organisms can be used to infer how recently they shared a common ancestor.
