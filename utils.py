@@ -49,7 +49,7 @@ def clean_text(text: str) -> str:
 # Document text extraction
 # ---------------------------------------------------------------------------
 
-MAX_FILE_SIZE_MB = 2
+MAX_FILE_SIZE_MB = 5
 MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
 
 def extract_text_from_file(uploaded_file) -> tuple[str, str]:

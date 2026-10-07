@@ -385,7 +385,7 @@ with tab_upload:
     uploaded_file = st.file_uploader(
         "Choose a file (.txt, .pdf, .docx)",
         type=["txt", "pdf", "docx"],
-        help="Upload text files, PDF documents, or Word files to extract and summarize.",
+        help="Upload text files, PDF documents, or Word files to extract and summarize. Max size: 5 MB.",
     )
     if uploaded_file is not None:
         extracted_text, err = utils.extract_text_from_file(uploaded_file)
